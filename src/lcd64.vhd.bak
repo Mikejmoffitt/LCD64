@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity lcd64 is
+port (
+	
+	n64_data: in std_logic_vector(6 downto 0);
+	n64_clock: in std_logic;
+	n64_dsync_n: in std_logic;
+	
+	lcd_red: out std_logic_vector(7 downto 0);
+	lcd_green: out std_logic_vector(7 downto 0);
+	lcd_blue: out std_logic_vector(7 downto 0);
+	
+	lcd_hs: out std_logic;
+	lcd_vs: out std_logic;
+	lcd_clk: out std_logic;
+	
+	lcd_tb: out std_logic;
+	lcd_rl: out std_logic;
+	lcd_en: out std_logic;
+	
+	lcd_reset: out std_logic
+);
+end lcd64
